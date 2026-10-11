@@ -264,8 +264,8 @@ function useStructuredData(post, slug) {
       description: post.description,
       datePublished: post.date,
       dateModified: post.date,
-      author: { "@type": "Organization", name: "DoAide PitchCraft", url: "https://pitch.doaide.com" },
-      publisher: { "@type": "Organization", name: "DoAide PitchCraft", url: "https://pitch.doaide.com", logo: { "@type": "ImageObject", url: "https://pitch.doaide.com/favicon.svg" } },
+      author: { "@type": "Organization", name: "DoAide | PitchCraft", url: "https://pitch.doaide.com" },
+      publisher: { "@type": "Organization", name: "DoAide | PitchCraft", url: "https://pitch.doaide.com", logo: { "@type": "ImageObject", url: "https://pitch.doaide.com/favicon.svg" } },
       mainEntityOfPage: { "@type": "WebPage", "@id": `https://pitch.doaide.com/blog/${slug}` },
       url: `https://pitch.doaide.com/blog/${slug}`,
     };
@@ -317,12 +317,10 @@ export default function BlogPostPage() {
       <header className="flex items-center max-w-3xl w-full mx-auto px-5 py-5">
         <Link to="/" className="flex items-center gap-2.5">
           <svg viewBox="0 0 40 40" className="w-8 h-8" aria-hidden="true">
-            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--brand)" />
-            <circle cx="14" cy="16" r="3" fill="var(--brand-text)" />
-            <circle cx="26" cy="16" r="3" fill="var(--brand-text)" />
-            <path d="M12 26 Q20 32 28 26" stroke="var(--brand-text)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--da-brand)" />
+            <text x="20" y="27" textAnchor="middle" fontFamily="Inter,system-ui,sans-serif" fontWeight="700" fontSize="18" fill="#fff">PC</text>
           </svg>
-          <span className="font-display text-xl tracking-tight">Pitch<em className="text-brand">Craft</em></span>
+          <span className="text-xl font-bold tracking-tight">DoAide <span className="text-brand">| PitchCraft</span></span>
         </Link>
         <div className="ml-auto flex items-center gap-3">
           <Link to="/blog" className="text-sm text-ink-soft hover:text-brand">← Blog</Link>
@@ -331,11 +329,11 @@ export default function BlogPostPage() {
       </header>
 
       <article className="max-w-3xl mx-auto px-5 py-8">
-        <h1 className="font-display text-3xl mb-2">{post.title}</h1>
+        <h1 className="font-bold text-3xl mb-2">{post.title}</h1>
         <p className="text-sm text-ink-muted mb-8">{post.date}</p>
         <div className="space-y-4">
           {post.body.map((block, i) => {
-            if (block.type === "h2") return <h2 key={i} className="font-display text-2xl mt-8 mb-2">{block.text}</h2>;
+            if (block.type === "h2") return <h2 key={i} className="font-bold text-2xl mt-8 mb-2">{block.text}</h2>;
             if (block.type === "cta") return (
               <div key={i} className="panel text-center py-6 mt-8">
                 <Link to={block.to} className="btn btn-primary text-base px-8">{block.text}</Link>

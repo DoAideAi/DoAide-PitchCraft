@@ -5,25 +5,25 @@ import { usePageTitle } from "../hooks/usePageTitle";
 
 const STYLES = {
   primary: {
-    label: "Primary (Gold)",
+    label: "Primary (Teal)",
     base: "display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;font-family:system-ui,sans-serif;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;border:none;",
-    normal: "background:#F0B429;color:#0A0A0B;",
+    normal: "background:#0D9488;color:#fff;",
   },
   outline: {
     label: "Outline",
     base: "display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;font-family:system-ui,sans-serif;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;",
-    normal: "background:transparent;color:#F0B429;border:2px solid #F0B429;",
+    normal: "background:transparent;color:#0D9488;border:2px solid #0D9488;",
   },
   minimal: {
     label: "Minimal",
     base: "display:inline-flex;align-items:center;gap:6px;font-family:system-ui,sans-serif;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;border:none;background:transparent;padding:8px 0;",
-    normal: "color:#F0B429;",
+    normal: "color:#0D9488;",
   },
 };
 
 export default function EmbedPage() {
   usePageTitle("Embed Widget");
-  const [buttonText, setButtonText] = useState("Try PitchCraft Free");
+  const [buttonText, setButtonText] = useState("Try DoAide PitchCraft Free");
   const [style, setStyle] = useState("primary");
   const [tool, setTool] = useState("generator");
   const [copied, setCopied] = useState("");
@@ -45,19 +45,17 @@ export default function EmbedPage() {
       <header className="flex items-center max-w-5xl w-full mx-auto px-5 py-5">
         <Link to="/" className="flex items-center gap-2.5">
           <svg viewBox="0 0 40 40" className="w-8 h-8" aria-hidden="true">
-            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--brand)" />
-            <circle cx="14" cy="16" r="3" fill="var(--brand-text)" />
-            <circle cx="26" cy="16" r="3" fill="var(--brand-text)" />
-            <path d="M12 26 Q20 32 28 26" stroke="var(--brand-text)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--da-brand)" />
+            <text x="20" y="27" textAnchor="middle" fontFamily="Inter,system-ui,sans-serif" fontWeight="700" fontSize="18" fill="#fff">PC</text>
           </svg>
-          <span className="font-display text-xl tracking-tight">Pitch<em className="text-brand">Craft</em></span>
+          <span className="text-xl font-bold tracking-tight">DoAide <span className="text-brand">| PitchCraft</span></span>
         </Link>
         <div className="ml-auto"><ThemeToggle /></div>
       </header>
 
       <main className="max-w-3xl mx-auto px-5 py-8">
-        <h1 className="font-display text-3xl mb-2">Embed PitchCraft Widget</h1>
-        <p className="text-ink-soft mb-8">Add PitchCraft tools to your website or blog.</p>
+        <h1 className="text-3xl font-bold mb-2">Embed PitchCraft Widget</h1>
+        <p className="text-ink-soft mb-8">Add DoAide PitchCraft tools to your website or blog.</p>
 
         <div className="panel space-y-4">
           <div>

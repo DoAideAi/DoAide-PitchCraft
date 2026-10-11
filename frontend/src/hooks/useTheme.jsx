@@ -7,7 +7,7 @@ function getInitial() {
     const stored = localStorage.getItem("pitchcraft_theme");
     if (stored === "light" || stored === "dark") return stored;
   } catch {}
-  return "dark";
+  return "light";
 }
 
 export function ThemeProvider({ children }) {

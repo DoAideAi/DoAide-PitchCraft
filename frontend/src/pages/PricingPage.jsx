@@ -60,18 +60,16 @@ export default function PricingPage() {
       <header className="flex items-center max-w-5xl w-full mx-auto px-5 py-5">
         <Link to="/" className="flex items-center gap-2.5">
           <svg viewBox="0 0 40 40" className="w-8 h-8" aria-hidden="true">
-            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--brand)" />
-            <circle cx="14" cy="16" r="3" fill="var(--brand-text)" />
-            <circle cx="26" cy="16" r="3" fill="var(--brand-text)" />
-            <path d="M12 26 Q20 32 28 26" stroke="var(--brand-text)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--da-brand)" />
+            <text x="20" y="27" textAnchor="middle" fontFamily="Inter,system-ui,sans-serif" fontWeight="700" fontSize="18" fill="#fff">PC</text>
           </svg>
-          <span className="font-display text-xl tracking-tight">Pitch<em className="text-brand">Craft</em></span>
+          <span className="text-xl font-bold tracking-tight">DoAide <span className="text-brand">| PitchCraft</span></span>
         </Link>
         <div className="ml-auto"><ThemeToggle /></div>
       </header>
 
       <main className="max-w-5xl mx-auto px-5 py-12">
-        <h1 className="font-display text-4xl text-center mb-3">Simple, Transparent Pricing</h1>
+        <h1 className="font-bold text-4xl text-center mb-3">Simple, Transparent Pricing</h1>
         <p className="text-center text-ink-soft mb-12 max-w-xl mx-auto">
           Start free with powerful tools. Upgrade when you need full AI pitch decks and advanced features.
         </p>

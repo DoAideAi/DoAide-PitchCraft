@@ -60,7 +60,7 @@ const TOOLS = [
 const FEATURES = [
   { icon: "⚡", title: "5-Minute Decks", desc: "From startup details to investor-ready outline — instantly." },
   { icon: "📈", title: "3-Year Projections", desc: "Revenue, costs, break-even — auto-calculated P&L tables." },
-  { icon: "🤖", title: "AI-Powered", desc: "Powered by advanced AI to generate compelling narratives." },
+  { icon: "🧠", title: "AI-Powered", desc: "Powered by advanced AI to generate compelling narratives." },
   { icon: "🆓", title: "Free Forever", desc: "Core tools always free. No signup required." },
 ];
 
@@ -79,13 +79,11 @@ export default function LandingPage() {
       <header className="flex items-center max-w-7xl w-full mx-auto px-5 py-5">
         <div className="flex items-center gap-2.5">
           <svg viewBox="0 0 40 40" className="w-8 h-8" aria-hidden="true">
-            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--brand)" />
-            <circle cx="14" cy="16" r="3" fill="var(--brand-text)" />
-            <circle cx="26" cy="16" r="3" fill="var(--brand-text)" />
-            <path d="M12 26 Q20 32 28 26" stroke="var(--brand-text)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--da-brand)" />
+            <text x="20" y="27" textAnchor="middle" fontFamily="Inter,system-ui,sans-serif" fontWeight="700" fontSize="18" fill="#fff">PC</text>
           </svg>
-          <span className="font-display text-2xl tracking-tight">
-            Pitch<em className="text-brand">Craft</em>
+          <span className="text-2xl font-bold tracking-tight">
+            DoAide <span className="text-brand">| PitchCraft</span>
           </span>
         </div>
         <nav className="ml-auto flex items-center gap-4">
@@ -103,10 +101,10 @@ export default function LandingPage() {
         style={{ animation: "fade-up 0.8s ease 0.2s both" }}
       >
         <div className="flex-1 min-w-0">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--glass-feature-bg)] border border-[var(--glass-feature-border)] text-sm text-brand mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--da-glass-feature-bg)] border border-[var(--da-glass-feature-border)] text-sm text-brand mb-4">
             🚀 Free startup tools — no signup
           </div>
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
             <span className="text-brand">{typed}</span>
             <span className="animate-pulse">|</span>
           </h1>
@@ -128,7 +126,7 @@ export default function LandingPage() {
       </section>
 
       <section className="max-w-7xl w-full mx-auto px-5 py-16">
-        <h2 className="font-display text-3xl text-center mb-10">Free Startup Tools</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Free Startup Tools</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {TOOLS.map((t) => (
             <Link key={t.to} to={t.to} className="panel hover:border-brand transition-colors group">
@@ -141,7 +139,7 @@ export default function LandingPage() {
       </section>
 
       <section className="max-w-7xl w-full mx-auto px-5 py-16">
-        <h2 className="font-display text-3xl text-center mb-10">Why PitchCraft?</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Why PitchCraft?</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {FEATURES.map((f) => (
             <div key={f.title} className="text-center">
@@ -154,7 +152,7 @@ export default function LandingPage() {
       </section>
 
       <section id="pricing" className="max-w-5xl w-full mx-auto px-5 py-16">
-        <h2 className="font-display text-3xl text-center mb-10">Simple Pricing</h2>
+        <h2 className="text-3xl font-bold text-center mb-10">Simple Pricing</h2>
         <div className="grid md:grid-cols-3 gap-5">
           {PRICING.map((p) => (
             <div key={p.name} className={`panel text-center ${p.highlight ? "border-brand ring-1 ring-brand" : ""}`}>
@@ -171,11 +169,15 @@ export default function LandingPage() {
 
       <footer className="border-t border-line py-8">
         <div className="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-sm text-ink-soft">© 2024 PitchCraft by DoAide. All rights reserved.</span>
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-medium text-brand bg-[var(--da-glass-feature-bg)] border border-[var(--da-glass-feature-border)] px-2 py-0.5 rounded-full">A DoAide Product</span>
+            <span className="text-sm text-ink-soft">© {new Date().getFullYear()} DoAide. All rights reserved.</span>
+          </div>
           <div className="flex gap-4 text-sm text-ink-soft">
-            <Link to="/blog" className="hover:text-brand">Blog</Link>
-            <Link to="/embed" className="hover:text-brand">Embed</Link>
-            <Link to="/sitemap" className="hover:text-brand">Sitemap</Link>
+            <a href="https://doaide.com" className="hover:text-brand transition-colors">DoAide.com</a>
+            <Link to="/blog" className="hover:text-brand transition-colors">Blog</Link>
+            <Link to="/embed" className="hover:text-brand transition-colors">Embed</Link>
+            <Link to="/sitemap" className="hover:text-brand transition-colors">Sitemap</Link>
           </div>
         </div>
       </footer>

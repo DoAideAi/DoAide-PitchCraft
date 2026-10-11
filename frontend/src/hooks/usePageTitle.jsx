@@ -15,7 +15,7 @@ export function usePageTitle(pageTitle) {
   const ctx = useContext(PageTitleContext);
   useEffect(() => {
     if (ctx) ctx.setTitle(pageTitle);
-    document.title = pageTitle ? `${pageTitle} — PitchCraft` : "PitchCraft — AI Pitch Deck Generator";
+    document.title = pageTitle ? `${pageTitle} — DoAide | PitchCraft` : "DoAide | PitchCraft — AI Pitch Deck Generator";
   }, [pageTitle, ctx]);
   return ctx;
 }

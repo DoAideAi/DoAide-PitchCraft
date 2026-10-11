@@ -1,151 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --ink: #E5E7EB;
-  --ink-soft: #9CA3AF;
-  --ink-strong: #fff;
-  --ink-muted: rgba(255, 255, 255, 0.45);
-  --ink-faint: rgba(255, 255, 255, 0.35);
-  --line: #2A2A2D;
-  --surface: #1A1A1D;
-  --surface-hover: #222225;
-  --canvas: #0A0A0B;
-  --brand: #F0B429;
-  --brand-dark: #D4A017;
-  --brand-text: #0A0A0B;
-  --brand-hover: #F7D070;
-  --good: #34D399;
-  --warn: #FBBF24;
-  --bad: #F87171;
-  --good-bg: rgba(52, 211, 153, 0.12);
-  --warn-bg: rgba(251, 191, 36, 0.12);
-  --bad-bg: rgba(248, 113, 113, 0.12);
-  --glass: rgba(16, 16, 18, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.07);
-  --glass-inset: rgba(255, 255, 255, 0.04);
-  --glass-input: rgba(10, 10, 11, 0.6);
-  --glass-input-border: rgba(255, 255, 255, 0.12);
-  --glass-input-placeholder: rgba(255, 255, 255, 0.25);
-  --glass-tab-border: rgba(255, 255, 255, 0.08);
-  --glass-feature-border: rgba(240, 180, 41, 0.2);
-  --glass-feature-bg: rgba(240, 180, 41, 0.04);
-  --skeleton-mid: #2A2A2D;
-  --radius: 10px;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --da-ink: #1A1A1D;
+  --da-ink-soft: #52525B;
+  --da-ink-strong: #0A0A0B;
+  --da-ink-muted: rgba(0, 0, 0, 0.5);
+  --da-ink-faint: rgba(0, 0, 0, 0.4);
+  --da-line: #E4E4E7;
+  --da-surface: #F4F4F5;
+  --da-surface-hover: #E4E4E7;
+  --da-canvas: #FAFAFA;
+  --da-brand: #0D9488;
+  --da-brand-dark: #0F766E;
+  --da-brand-text: #fff;
+  --da-brand-hover: #14B8A6;
+  --da-good: #059669;
+  --da-warn: #D97706;
+  --da-bad: #DC2626;
+  --da-good-bg: rgba(5, 150, 105, 0.08);
+  --da-warn-bg: rgba(217, 119, 6, 0.08);
+  --da-bad-bg: rgba(220, 38, 38, 0.08);
+  --da-glass: rgba(255, 255, 255, 0.85);
+  --da-glass-border: rgba(0, 0, 0, 0.08);
+  --da-glass-inset: rgba(0, 0, 0, 0.03);
+  --da-glass-input: rgba(255, 255, 255, 0.7);
+  --da-glass-input-border: rgba(0, 0, 0, 0.15);
+  --da-glass-input-placeholder: rgba(0, 0, 0, 0.35);
+  --da-glass-tab-border: rgba(0, 0, 0, 0.1);
+  --da-glass-feature-border: rgba(13, 148, 136, 0.25);
+  --da-glass-feature-bg: rgba(13, 148, 136, 0.06);
+  --da-skeleton-mid: #E4E4E7;
+  --da-radius: 10px;
+  --da-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-[data-theme="light"] {
-  --ink: #1A1A1D;
-  --ink-soft: #52525B;
-  --ink-strong: #0A0A0B;
-  --ink-muted: rgba(0, 0, 0, 0.5);
-  --ink-faint: rgba(0, 0, 0, 0.4);
-  --line: #E4E4E7;
-  --surface: #F4F4F5;
-  --surface-hover: #E4E4E7;
-  --canvas: #FAFAFA;
-  --brand-text: #fff;
-  --brand-hover: #D4A017;
-  --good: #059669;
-  --warn: #D97706;
-  --bad: #DC2626;
-  --good-bg: rgba(5, 150, 105, 0.08);
-  --warn-bg: rgba(217, 119, 6, 0.08);
-  --bad-bg: rgba(220, 38, 38, 0.08);
-  --glass: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(0, 0, 0, 0.08);
-  --glass-inset: rgba(0, 0, 0, 0.03);
-  --glass-input: rgba(255, 255, 255, 0.7);
-  --glass-input-border: rgba(0, 0, 0, 0.15);
-  --glass-input-placeholder: rgba(0, 0, 0, 0.35);
-  --glass-tab-border: rgba(0, 0, 0, 0.1);
-  --glass-feature-border: rgba(180, 130, 10, 0.25);
-  --glass-feature-bg: rgba(240, 180, 41, 0.06);
-  --skeleton-mid: #E4E4E7;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+[data-theme="dark"] {
+  --da-ink: #E5E7EB;
+  --da-ink-soft: #9CA3AF;
+  --da-ink-strong: #fff;
+  --da-ink-muted: rgba(255, 255, 255, 0.45);
+  --da-ink-faint: rgba(255, 255, 255, 0.35);
+  --da-line: #2A2A2D;
+  --da-surface: #1A1A1D;
+  --da-surface-hover: #222225;
+  --da-canvas: #0A0A0B;
+  --da-brand-text: #0A0A0B;
+  --da-brand-hover: #0F766E;
+  --da-good: #34D399;
+  --da-warn: #FBBF24;
+  --da-bad: #F87171;
+  --da-good-bg: rgba(52, 211, 153, 0.12);
+  --da-warn-bg: rgba(251, 191, 36, 0.12);
+  --da-bad-bg: rgba(248, 113, 113, 0.12);
+  --da-glass: rgba(16, 16, 18, 0.8);
+  --da-glass-border: rgba(255, 255, 255, 0.07);
+  --da-glass-inset: rgba(255, 255, 255, 0.04);
+  --da-glass-input: rgba(10, 10, 11, 0.6);
+  --da-glass-input-border: rgba(255, 255, 255, 0.12);
+  --da-glass-input-placeholder: rgba(255, 255, 255, 0.25);
+  --da-glass-tab-border: rgba(255, 255, 255, 0.08);
+  --da-glass-feature-border: rgba(13, 148, 136, 0.3);
+  --da-glass-feature-bg: rgba(13, 148, 136, 0.08);
+  --da-skeleton-mid: #2A2A2D;
+  --da-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: var(--canvas);
-  color: var(--ink);
-  font-family: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
+  background: var(--da-canvas);
+  color: var(--da-ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   transition: background-color 200ms ease, color 200ms ease;
 }
 
 ::selection {
-  background-color: var(--brand);
-  color: var(--brand-text);
+  background-color: var(--da-brand);
+  color: var(--da-brand-text);
 }
 
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: var(--canvas); }
-::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+::-webkit-scrollbar-track { background: var(--da-canvas); }
+::-webkit-scrollbar-thumb { background: var(--da-line); border-radius: 4px; }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-[var(--radius)] font-semibold text-sm transition-colors duration-150 cursor-pointer border border-transparent;
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-[var(--da-radius)] font-semibold text-sm transition-colors duration-150 cursor-pointer border border-transparent;
   }
   .btn:disabled {
     @apply opacity-55 cursor-not-allowed;
   }
   .btn-primary {
-    background: var(--brand);
-    color: var(--brand-text);
+    background: var(--da-brand);
+    color: var(--da-brand-text);
   }
   .btn-primary:hover:not(:disabled) {
-    background: var(--brand-dark);
+    background: var(--da-brand-dark);
   }
   .btn-ghost {
-    background: var(--surface);
-    border-color: var(--line);
-    color: var(--ink);
+    background: var(--da-surface);
+    border-color: var(--da-line);
+    color: var(--da-ink);
   }
   .btn-ghost:hover:not(:disabled) {
-    background: var(--surface-hover);
+    background: var(--da-surface-hover);
   }
   .btn-danger {
-    background: var(--bad-bg);
-    color: var(--bad);
+    background: var(--da-bad-bg);
+    color: var(--da-bad);
     border-color: rgba(248, 113, 113, 0.3);
   }
 
   .chip {
     @apply inline-block px-2 py-0.5 rounded-full text-xs font-semibold;
   }
-  .chip-good { background: var(--good-bg); color: var(--good); }
-  .chip-warn { background: var(--warn-bg); color: var(--warn); }
-  .chip-bad { background: var(--bad-bg); color: var(--bad); }
-  .chip-neutral { background: var(--canvas); color: var(--ink-soft); }
+  .chip-good { background: var(--da-good-bg); color: var(--da-good); }
+  .chip-warn { background: var(--da-warn-bg); color: var(--da-warn); }
+  .chip-bad { background: var(--da-bad-bg); color: var(--da-bad); }
+  .chip-neutral { background: var(--da-canvas); color: var(--da-ink-soft); }
 
   .panel {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    background: var(--da-surface);
+    border: 1px solid var(--da-line);
+    border-radius: var(--da-radius);
+    box-shadow: var(--da-shadow);
     @apply p-5 mb-5;
   }
 
   .input-field {
-    @apply w-full px-3 py-2.5 rounded-[var(--radius)] text-sm;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    color: var(--ink);
+    @apply w-full px-3 py-2.5 rounded-[var(--da-radius)] text-sm;
+    background: var(--da-surface);
+    border: 1px solid var(--da-line);
+    color: var(--da-ink);
     font-family: inherit;
   }
   .input-field:focus {
-    outline: 2px solid var(--brand);
+    outline: 2px solid var(--da-brand);
     outline-offset: 1px;
   }
   .input-field::placeholder {
-    color: var(--ink-muted);
+    color: var(--da-ink-muted);
   }
 
   .table-base {
@@ -155,14 +155,14 @@ body {
   .table-base th,
   .table-base td {
     @apply py-2.5 px-3 text-left;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--da-line);
   }
   .table-base thead th {
     @apply text-xs uppercase tracking-wide;
-    color: var(--ink-soft);
+    color: var(--da-ink-soft);
   }
   .table-base tbody tr:hover {
-    background: var(--surface-hover);
+    background: var(--da-surface-hover);
   }
 }
 
@@ -171,7 +171,7 @@ body {
   100% { background-position: 0 50%; }
 }
 .skeleton {
-  background: linear-gradient(90deg, var(--surface) 25%, var(--skeleton-mid) 37%, var(--surface) 63%);
+  background: linear-gradient(90deg, var(--da-surface) 25%, var(--da-skeleton-mid) 37%, var(--da-surface) 63%);
   background-size: 400% 100%;
   animation: skeleton-shimmer 1.4s ease-in-out infinite;
   border-radius: 6px;
@@ -197,11 +197,11 @@ body {
 
 .btn:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--brand);
+  outline: 2px solid var(--da-brand);
   outline-offset: 2px;
 }
 .btn-primary:focus-visible {
-  outline-color: var(--ink);
+  outline-color: var(--da-ink);
 }
 
 @media (prefers-reduced-motion: reduce) {

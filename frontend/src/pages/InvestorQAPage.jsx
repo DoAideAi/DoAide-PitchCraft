@@ -59,18 +59,16 @@ export default function InvestorQAPage() {
       <header className="flex items-center max-w-5xl w-full mx-auto px-5 py-5">
         <Link to="/" className="flex items-center gap-2.5">
           <svg viewBox="0 0 40 40" className="w-8 h-8" aria-hidden="true">
-            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--brand)" />
-            <circle cx="14" cy="16" r="3" fill="var(--brand-text)" />
-            <circle cx="26" cy="16" r="3" fill="var(--brand-text)" />
-            <path d="M12 26 Q20 32 28 26" stroke="var(--brand-text)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <rect x="2" y="2" width="36" height="36" rx="8" fill="var(--da-brand)" />
+            <text x="20" y="27" textAnchor="middle" fontFamily="Inter,system-ui,sans-serif" fontWeight="700" fontSize="18" fill="#fff">PC</text>
           </svg>
-          <span className="font-display text-xl tracking-tight">Pitch<em className="text-brand">Craft</em></span>
+          <span className="text-xl font-bold tracking-tight">DoAide <span className="text-brand">| PitchCraft</span></span>
         </Link>
         <div className="ml-auto flex items-center gap-3"><ThemeToggle /></div>
       </header>
 
       <main className="max-w-3xl mx-auto px-5 py-8">
-        <h1 className="font-display text-3xl mb-2">Investor Q&A Prep</h1>
+        <h1 className="font-bold text-3xl mb-2">Investor Q&A Prep</h1>
         <p className="text-ink-soft mb-8">AI generates tough investor questions with suggested answers tailored to your startup.</p>
 
         <form onSubmit={generate} className="panel space-y-4">
@@ -115,7 +113,7 @@ export default function InvestorQAPage() {
 
         {result && (
           <div className="mt-8 space-y-4" style={{ animation: "fade-up 0.4s ease both" }}>
-            <h2 className="font-display text-2xl">{result.company_name} — Investor Q&A</h2>
+            <h2 className="font-bold text-2xl">{result.company_name} — Investor Q&A</h2>
 
             {result.questions.map((qa, i) => (
               <div key={i} className="panel">

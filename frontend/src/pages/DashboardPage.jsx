@@ -15,7 +15,7 @@ export default function DashboardPage() {
 
   return (
     <div>
-      <h1 className="font-display text-3xl mb-2">Welcome back, {user?.name}</h1>
+      <h1 className="font-bold text-3xl mb-2">Welcome back, {user?.name}</h1>
       <p className="text-ink-soft mb-8">
         Plan: <span className="chip chip-good">{user?.plan?.toUpperCase()}</span>
       </p>
