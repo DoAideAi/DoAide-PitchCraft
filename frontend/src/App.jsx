@@ -1,7 +1,8 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Shell from "./components/Shell";
 import { SkeletonPanel } from "./components/Skeleton";
+import useSEO from "./hooks/useSEO";
 import { useAuth } from "./hooks/useAuth";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
@@ -56,6 +57,7 @@ function Home() {
 }
 
 export default function App() {
+  useSEO(useLocation().pathname.replace(/\/+$/, "") || "/");
   return (
     <Routes>
       <Route path="/login" element={<Navigate to="/" replace />} />
